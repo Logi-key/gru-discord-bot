@@ -1141,7 +1141,7 @@ client.on("message",(message) => {
 				message.channel.send(message.content.slice(5))
 			}
 			
-			if(message.content.toLowerCase().indexOf("%punir") == 0) { // spa no dm de algue
+			if(message.content.toLowerCase().indexOf("%punir") == 0) { // spa no dm de algue (tururu removendo daq a uns tempo)
 				var ppl = null;
 				if(message.mentions.users.first() != null) {
 					ppl = message.mentions.users.first()
