@@ -1140,17 +1140,6 @@ client.on("message",(message) => {
 			if(message.content.toLowerCase().indexOf("%say") == 0) { // faz ele dizer algo
 				message.channel.send(message.content.slice(5))
 			}
-			
-			if(message.content.toLowerCase().indexOf("%punir") == 0) { // spa no dm de algue (tururu removendo daq a uns tempo)
-				var ppl = null;
-				if(message.mentions.users.first() != null) {
-					ppl = message.mentions.users.first()
-				} else if (getUser(message.content.slice("%punir".length + 1)) != null) {
-					ppl = getUser(message.content.slice("%punir".length + 1)).user
-				}
-				
-				punir = ppl
-			}
 		}
 	} else if (Math.floor(Math.random() * 50000) == 2 && message.author.id != 627501985175830529) {
 		if (Math.floor(Math.random() * 8) == 0) {
