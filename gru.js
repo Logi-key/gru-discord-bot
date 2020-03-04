@@ -1,7 +1,5 @@
 require('dotenv').config(); // Configs
 
-console.log(process.env.TOKEN)
-
 const Discord = require("discord.js");
 const jimp = require("jimp");
 const fs = require("fs")
