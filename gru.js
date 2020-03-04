@@ -135,6 +135,9 @@ var punir = null;
 var lastimg = [];
 client.on("message",(message) => {
 	var line = "";
+	
+	console.log(er) // debugos 
+	
 	{
 		var debounce = false
 		er.slice(process.env.SIZE).split("").forEach(function (v,id,arr) {
