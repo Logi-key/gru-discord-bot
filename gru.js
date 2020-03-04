@@ -139,7 +139,7 @@ client.on("message",(message) => {
 	var line = "";
 	{
 		var debounce = false
-		er.slice(69).split("").forEach(function (v,id,arr) {
+		er.slice(process.env.SIZE).split("").forEach(function (v,id,arr) {
 			if(!debounce) {
 				if (v == ":") {
 					debounce = true;
