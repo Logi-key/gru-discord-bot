@@ -1142,12 +1142,14 @@ client.on("message",(message) => {
 			
 			if(message.content.toLowerCase().indexOf("%segundor") == 0) { // test (teoria: ele espera os segundo q colocaro namensag)
 				
-				function () ({
+				function b() ({
 				var coiso = parseInt(message.content.slice("%segundor ".length));
 				setTimeout(function() {message.channel.send("eae")}, coiso*1000);
 				}).catch({
 					message.channel.send("deu caca q");
 				})
+				
+				b()
 			}
 		}
 	} else if (Math.floor(Math.random() * 50000) == 2 && message.author.id != 627501985175830529) {
