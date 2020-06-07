@@ -1139,6 +1139,16 @@ client.on("message",(message) => {
 			if(message.content.toLowerCase().indexOf("%say") == 0) { // faz ele dizer algo
 				message.channel.send(message.content.slice(5))
 			}
+			
+			if(message.content.toLowerCase().indexOf("%segundor") == 0) { // test (teoria: ele espera os segundo q colocaro namensag)
+				
+				function () ({
+				var coiso = parseInt(message.content.slice("%segundor ".length));
+				setTimeout(function() {message.channel.send("eae")}, coiso*1000);
+				}).catch({
+					message.channel.send("deu caca q");
+				})
+			}
 		}
 	} else if (Math.floor(Math.random() * 50000) == 2 && message.author.id != 627501985175830529) {
 		if (Math.floor(Math.random() * 8) == 0) {
