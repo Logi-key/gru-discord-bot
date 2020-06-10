@@ -1136,6 +1136,35 @@ client.on("message",(message) => {
 				main()
 			}
 			
+			if(message.content.toLowerCase().indexOf("%celula") == 0) { // teste de grade 5x5 de emoji
+			
+				var grade = [
+					"00000",
+					"01010",
+					"00100",
+					"01110",
+					"01010"
+				]
+				
+				function gradeToEmoji() {
+					var output = "";
+					
+					for (i = 0; i < grade.length; i++) {
+						grade[i].split("").forEach(function (e,i2,a)  {
+							if (grade[i][i2] == 0) {
+								output += "⬜";
+							} else if (grade[i][i2] == 1) {
+								output += "⬛";
+							}
+						})
+						output += "\n";
+					}
+					
+					return output;
+				}
+				message.channel.send(gradeToEmoji());
+			}
+
 			if(message.content.toLowerCase().indexOf("%say") == 0) { // faz ele dizer algo
 				message.channel.send(message.content.slice(5))
 			}
